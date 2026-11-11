@@ -1,0 +1,15 @@
+### NetBeans ###
+/build/
+/dist/
+/nbproject/private/
+
+### IntelliJ / Eclipse / VS Code ###
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+### Mac OS ###
+.DS_Store
