@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.monitorium.usuario.controller.LoginController"
+      alignment="TOP_CENTER" spacing="14" prefWidth="460">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label text="Monitorium" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+    <TabPane fx:id="abas" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Entrar">
+                <content>
+                    <VBox spacing="10">
+                        <padding>
+                            <Insets top="16" right="8" bottom="8" left="8"/>
+                        </padding>
+                        <Label text="Usuário"/>
+                        <TextField fx:id="txtUsuario" promptText="seu usuário"/>
+                        <Label text="Senha"/>
+                        <PasswordField fx:id="txtSenha" promptText="sua senha" onAction="#aoClicarEntrar"/>
+                        <Button text="Entrar" onAction="#aoClicarEntrar" maxWidth="Infinity" defaultButton="true"/>
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Cadastrar aluno">
+                <content>
+                    <VBox spacing="8">
+                        <padding>
+                            <Insets top="16" right="8" bottom="8" left="8"/>
+                        </padding>
+                        <Label text="Nome completo"/>
+                        <TextField fx:id="txtCadNome"/>
+                        <Label text="Usuário"/>
+                        <TextField fx:id="txtCadUsuario"/>
+                        <Label text="E-mail"/>
+                        <TextField fx:id="txtCadEmail"/>
+                        <Label text="Senha (mínimo 6 caracteres)"/>
+                        <PasswordField fx:id="txtCadSenha"/>
+                        <Label text="Confirmar senha"/>
+                        <PasswordField fx:id="txtCadConfirmar" onAction="#aoClicarCadastrar"/>
+                        <Button text="Criar conta" onAction="#aoClicarCadastrar" maxWidth="Infinity"/>
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox>
