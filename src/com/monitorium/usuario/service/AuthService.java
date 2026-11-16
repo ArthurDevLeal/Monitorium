@@ -2,9 +2,9 @@ package com.monitorium.usuario.service;
 
 import java.util.UUID;
 
-import com.monitorium.comum.RegraNegocioException;
-import com.monitorium.comum.Senha;
-import com.monitorium.comum.UsuarioLogado;
+import com.monitorium.comum.excecao.RegraNegocioException;
+import com.monitorium.comum.util.Senha;
+import com.monitorium.comum.sessao.UsuarioLogado;
 import com.monitorium.usuario.model.Administrador;
 import com.monitorium.usuario.model.Aluno;
 import com.monitorium.usuario.model.Monitor;

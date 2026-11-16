@@ -1,8 +1,8 @@
 package com.monitorium.usuario.controller;
 
-import com.monitorium.comum.Mensagens;
-import com.monitorium.comum.MonitoriumException;
-import com.monitorium.comum.Navegador;
+import com.monitorium.comum.util.Mensagens;
+import com.monitorium.comum.excecao.MonitoriumException;
+import com.monitorium.comum.navegacao.Navegador;
 import com.monitorium.usuario.model.Usuario;
 import com.monitorium.usuario.service.AuthService;
 

@@ -1,4 +1,4 @@
-package com.monitorium.comum;
+package com.monitorium.comum.util;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;

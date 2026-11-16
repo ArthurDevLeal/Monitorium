@@ -1,5 +1,6 @@
-package com.monitorium.comum;
+package com.monitorium.comum.util;
 
+import com.monitorium.comum.excecao.MonitoriumException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

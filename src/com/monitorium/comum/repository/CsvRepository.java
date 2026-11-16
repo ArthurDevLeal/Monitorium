@@ -1,5 +1,6 @@
-package com.monitorium.comum;
+package com.monitorium.comum.repository;
 
+import com.monitorium.comum.excecao.ArquivoException;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;

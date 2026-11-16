@@ -1,6 +1,6 @@
 package com.monitorium.usuario.model;
 
-import com.monitorium.comum.RegraNegocioException;
+import com.monitorium.comum.excecao.RegraNegocioException;
 
 /**
  * Qualquer pessoa que usa o sistema. Aluno, Monitor e Administrador herdam daqui.

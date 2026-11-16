@@ -1,5 +1,6 @@
-package com.monitorium.comum;
+package com.monitorium.comum.navegacao;
 
+import com.monitorium.comum.excecao.MonitoriumException;
 import java.io.IOException;
 import java.net.URL;
 

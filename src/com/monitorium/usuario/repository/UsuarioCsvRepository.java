@@ -1,7 +1,7 @@
 package com.monitorium.usuario.repository;
 
-import com.monitorium.comum.CsvRepository;
-import com.monitorium.comum.MonitoriumException;
+import com.monitorium.comum.repository.CsvRepository;
+import com.monitorium.comum.excecao.MonitoriumException;
 import com.monitorium.usuario.model.Administrador;
 import com.monitorium.usuario.model.Aluno;
 import com.monitorium.usuario.model.Monitor;

@@ -1,4 +1,4 @@
-package com.monitorium.comum;
+package com.monitorium.comum.repository;
 
 import java.util.List;
 

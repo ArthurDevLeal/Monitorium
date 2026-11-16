@@ -1,4 +1,4 @@
-package com.monitorium.comum;
+package com.monitorium.comum.excecao;
 
 /**
  * Erro base do sistema. Herda de RuntimeException, por isso o Java não obriga

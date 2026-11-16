@@ -1,4 +1,4 @@
-package com.monitorium.comum;
+package com.monitorium.comum.sessao;
 
 import com.monitorium.usuario.model.Usuario;
 

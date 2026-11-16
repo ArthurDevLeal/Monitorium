@@ -2,8 +2,8 @@ package com.monitorium.app;
 
 import java.io.IOException;
 
-import com.monitorium.comum.Mensagens;
-import com.monitorium.comum.MonitoriumException;
+import com.monitorium.comum.util.Mensagens;
+import com.monitorium.comum.excecao.MonitoriumException;
 import com.monitorium.usuario.service.AuthService;
 
 import javafx.application.Application;
