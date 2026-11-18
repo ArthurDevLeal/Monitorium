@@ -1,9 +1,8 @@
 package monitorium.usuario.service;
 
-import java.util.UUID;
-
 import monitorium.comum.excecao.RegraNegocioException;
 import monitorium.comum.sessao.UsuarioLogado;
+import monitorium.comum.util.GerarId;
 import monitorium.usuario.model.Administrador;
 import monitorium.usuario.model.Aluno;
 import monitorium.usuario.model.Monitor;
@@ -26,12 +25,12 @@ public class AuthService {
             }
         }
         usuarioRepository.salvar(new Administrador(
-                novoId(), "Administrador", ADMIN_USUARIO, ADMIN_SENHA, "admin@monitorium.local"));
+                GerarId.gerarId(), "Administrador", ADMIN_USUARIO, ADMIN_SENHA, "admin@monitorium.local"));
     }
 
     public Aluno cadastrarAluno(String nome, String usuario, String senha, String email) {
         validarDadosDeCadastro(nome, usuario, senha, email);
-        Aluno aluno = new Aluno(novoId(), nome, usuario, senha, email);
+        Aluno aluno = new Aluno(GerarId.gerarId(), nome, usuario, senha, email);
         usuarioRepository.salvar(aluno);
         return aluno;
     }
@@ -41,7 +40,7 @@ public class AuthService {
             throw new RegraNegocioException("Somente o administrador pode cadastrar monitores.");
         }
         validarDadosDeCadastro(nome, usuario, senha, email);
-        Monitor monitor = new Monitor(novoId(), nome, usuario, senha, email);
+        Monitor monitor = new Monitor(GerarId.gerarId(), nome, usuario, senha, email);
         usuarioRepository.salvar(monitor);
         return monitor;
     }
@@ -51,7 +50,7 @@ public class AuthService {
             throw new RegraNegocioException("Informe usuário e senha.");
         }
         Usuario encontrado = usuarioRepository.buscarPorNomeUsuario(nomeUsuario.trim());
-        if (encontrado == null || !senha.equals(encontrado.getSenha())){
+        if (encontrado == null || !senha.equals(encontrado.getSenha())) {
             throw new RegraNegocioException("Usuário ou senha inválidos.");
         }
         UsuarioLogado.set(encontrado);
@@ -61,7 +60,6 @@ public class AuthService {
     public void logout() {
         UsuarioLogado.limpar();
     }
-
 
     private void validarDadosDeCadastro(String nome, String usuario, String senha, String email) {
         if (vazio(nome) || vazio(usuario) || vazio(email) || senha == null || senha.isEmpty()) {
@@ -95,7 +93,4 @@ public class AuthService {
         return texto == null || texto.isBlank();
     }
 
-    private String novoId() {
-        return UUID.randomUUID().toString();
-    }
 }
