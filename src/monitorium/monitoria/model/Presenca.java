@@ -4,6 +4,8 @@
  */
 package monitorium.monitoria.model;
 
+import monitorium.comum.util.Exigir;
+
 /**
  *
  * @author arthu
@@ -16,9 +18,9 @@ public class Presenca {
     private boolean presente;
 
     public Presenca(String id, String alunoId, String sessaoId) {
-        this.id = id;
-        this.alunoId = alunoId;
-        this.sessaoId = sessaoId;
+        this.id = Exigir.exigir(id, "id");
+        this.alunoId = Exigir.exigir(alunoId, "aluno");
+        this.sessaoId = Exigir.exigir(sessaoId, "sessão");
         this.presente = false;
     }
 
@@ -35,11 +37,11 @@ public class Presenca {
     }
 
     public void setSessaoId(String sessaoId) {
-        this.sessaoId = sessaoId;
+        this.sessaoId = Exigir.exigir(sessaoId, "sessão");
     }
 
     public void setAlunoId(String alunoId) {
-        this.alunoId = alunoId;
+        this.alunoId = Exigir.exigir(alunoId, "aluno");
     }
 
     public boolean isPresente() {

@@ -68,24 +68,19 @@ public class SessaoMonitoria {
     }
 
     public void setData(String data) {
-        this.data = data;
+        this.data = Exigir.exigir(data, "data");
     }
 
     public void setDisciplinaId(String disciplinaId) {
-        this.disciplinaId = disciplinaId;
+        this.disciplinaId = Exigir.exigir(disciplinaId, "disciplina");
     }
 
     public void setMonitorId(String monitorId) {
-        this.monitorId = monitorId;
+        this.monitorId = Exigir.exigir(monitorId, "monitor");
     }
 
     public void setSalaId(String salaId) {
-         if (salaId == null) {
-            throw new MonitoriumException("Valor inválido para id da sala.");
-        } else {
-                    this.salaId = salaId;
-
-        }
+        this.salaId = Exigir.exigir(salaId, "sala");
     }
 
     public void setVagas(int vagas) {
