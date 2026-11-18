@@ -13,3 +13,6 @@
 
 ### Mac OS ###
 .DS_Store
+
+### Dados gerados em runtime ###
+/dados/
