@@ -58,7 +58,7 @@ public class DisciplinaService {
         disciplinaRepository.salvar(disciplina);
     }
 
-    private Disciplina buscar(String id) {
+    public Disciplina buscar(String id) {
         Disciplina disciplina = disciplinaRepository.buscarPorId(id);
         if (disciplina == null) {
             throw new RegraNegocioException("Disciplina não encontrada.");
@@ -86,7 +86,7 @@ public class DisciplinaService {
 
     private void validarMonitor(String monitorId) {
         if (vazio(monitorId)) {
-            // TODO: aplicar a verificação se existe um monitor com esse ID.
+            // TODO: aplicar a verificação se existe um monitor com esse ID
             throw new RegraNegocioException("Escolha o monitor responsável.");
         }
     }

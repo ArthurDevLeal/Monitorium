@@ -4,6 +4,9 @@
  */
 package monitorium.monitoria.model;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import monitorium.comum.excecao.MonitoriumException;
 import monitorium.comum.util.Exigir;
 
@@ -31,8 +34,9 @@ public class SessaoMonitoria {
         }
     }
 
-    public boolean validarSessao(int horarioAtual) {
-        return horario < horarioAtual;
+    public boolean jaComecou() {
+        LocalDateTime inicio = LocalDateTime.of(LocalDate.parse(data), LocalTime.of(horario, 0));
+        return !LocalDateTime.now().isBefore(inicio);
     }
 
     public String getData() {
